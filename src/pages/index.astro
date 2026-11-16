@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { topics } from "../data/topics";
+---
+<BaseLayout title="Manual esencial de HTML5">
+  <section id="inicio"><div class="intro"><p class="eyebrow">Aprendizajes esenciales de HTML</p><h2>Empieza por lo básico y avanza paso a paso.</h2><p>Este manual reúne los aprendizajes esenciales de HTML. Explora cada tema poco a poco y amplía tus conocimientos a medida que avances. No se trata de memorizar etiquetas, sino de entender para qué sirven y cómo usarlas.</p></div></section>
+  <section id="temas"><p class="eyebrow">Índice del manual</p><h2>Temas del curso</h2><p>Elige un tema para leer su explicación, consultar el ejemplo y ampliar o descargar la infografía.</p><div class="topic-grid">{topics.map((topic)=><article class="topic-card"><span class="topic-number">0{topic.order}</span><p class="eyebrow">Área de aprendizaje</p><h3>{topic.title}</h3><p>{topic.description}</p><a class="topic-link" href={`manual/${topic.slug}/`}>Ver tema <span aria-hidden="true">→</span></a></article>)}</div></section>
+</BaseLayout>

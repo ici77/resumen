@@ -1,0 +1,20 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+.astro/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
